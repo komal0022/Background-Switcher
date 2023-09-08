@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    body{
+        padding: 20px 100px;
+        margin: 0px;
+
+    }
+    h1{
+        text-align: center;
+        text-decoration: underline;
+      /*  background-color: rgb(6, 132, 243);
+        color: rgb(238, 235, 237);
+        padding: 5px;
+        margin: 0px;
+        */
+    }
+    img{
+        width: 70%;
+        margin: 0 auto;
+        height: auto;
+        padding:  0px 130px;
+    }
+    p{
+        font-size: 18px;
+        text-align: justify;
+    }
+    .btn{
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border: solid grey 2px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    #white{background-color: #ffffff;}
+    #aqua{ background-color: #00ffff;}
+    #violet{ background-color:#ee82ee;}
+    #black{ background-color: #000000;}
+    #color-switcher{ text-align: right;}
+    </style>
+</head>
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#00ffff')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#ee82ee')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">BlockChain</h1>
+    <img src="bc.jpeg" alt="loading" ><br>
+    <p class="text">
+        Blockchain is a powerful emerging distributed ledger technology that provides many benefits of data security, autonomy, transparency, auditability, privacy, immutability, efficiency, speed, and cost savings. It evicts central authorities and facilitates the creation of autonomous, secure, and transparent systems with the provision of trust among non-trusting entities. Many companies, consortiums, and countries have currently incorporated blockchain into their systems for its benefits after successful trials (Makhdoom et al., 2019, Hewa et al., 2020). A survey by Deloitte (Pawczuk et al., 2019) revealed that blockchain will eventually reach mainstream adoption as a large number of its projects are now in the production stage. By 2025 and 2030, the business value of blockchain was forecasted by Gartner (Furlonger and Valdes, 2017) to be over 176 billion and 3.1 trillion USD, respectively. Another report by Cisco (Cisco, 2018) also forecasted that 10% of the global GDP will be on blockchain by 2027.
+    </p>
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("text");
+            if(color == '#000000'){
+            
+                for(let elm of txt){
+                    elm.style.color = "white";
+                }
+            }else{
+                for(let elm of txt){
+                    elm.style.color = "black";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
